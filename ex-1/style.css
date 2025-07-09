@@ -17,49 +17,8 @@
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 700px;
+  font-weight: 700;
   color: #183b56;
-}
-
-.line {
-  background: linear-gradient(
-    to bottom,
-    transparent 50%,
-    #ff8345,
-    hsla(20, 100%, 64%, 1)
-  );
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 1.25rem;
-  letter-spacing: 0.2px;
-  color: #183b56;
-  position: absolute;
-  top: 170px;
-  left: 30px;
-}
-
-h4 {
-  font-family: "DM Sans", sans-serif;
-  color: #5a7184;
-  font-size: 1rem;
-  font-weight: 400;
-  position: absolute;
-  top: 210px;
-  left: 30px;
-}
-
-h3 {
-  position: absolute;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  font-size: 1.5rem;
-  color: white;
-  width: 136px;
-  height: 102px;
-  top: 80px;
-  padding-left: 25px;
 }
 
 .categories {
@@ -93,13 +52,9 @@ h3 {
 }
 
 .job-more {
-  position: relative;
-  cursor: pointer;
-  padding: 0px;
   background-color: #ff8345;
-  width: 280px;
-  height: 268px;
-  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
 }
 
 .icon {
@@ -109,7 +64,6 @@ h3 {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: none;
   background-color: hsla(20, 100%, 64%, 0.1);
 }
 
@@ -122,49 +76,53 @@ h3 {
   height: 40px;
 }
 
-/* arrow */
-.arrow {
-  position: absolute;
-  top: 210px;
-  left: 235px;
-  width: 32px;
-  height: 32px;
-}
-
+.arrow,
 .explore-more-arrow {
   position: absolute;
   width: 32px;
   height: 32px;
-  top: 130px;
-  left: 242px;
 }
 
-.first-line {
-  position: absolute;
-  opacity: 0.5;
-  bottom: 200px;
-  left: 90px;
+@media (max-width: 600px) {
+  .categories {
+    width: 100vw;
+    min-width: unset;
+    height: auto;
+    max-width: 100vw;
+    padding: 0 8px;
+  }
+  .row-1,
+  .row-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .job-item,
+  .job-more {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 12px 0;
+    padding: 24px 16px;
+  }
+  .job-more {
+    min-height: 120px;
+    height: auto;
+  }
+  .arrow,
+  .explore-more-arrow {
+    position: static;
+    margin-top: 16px;
+    margin-left: auto;
+    display: block;
+  }
+  .topic {
+    height: auto;
+    margin-top: 24px;
+    padding: 0 8px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
-
-.second-line {
-  position: absolute;
-  opacity: 0.5;
-  bottom: 160px;
-  left: 50px;
-}
-
-.third-line {
-  position: absolute;
-  opacity: 0.5;
-  top: 183px;
-  left: 0px;
-}
-
-.fourth-line {
-  position: absolute;
-  opacity: 0.5;
-  top: 230px;
-  left: 0px;
-}
-
-/* Start coding here */
